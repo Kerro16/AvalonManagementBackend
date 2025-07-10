@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class miembros {
+public class Miembros {
     
 
     @Id
@@ -14,12 +14,12 @@ public class miembros {
     private Long id;
     private String account;
     private boolean isActive;
-    private roles role;
+    private Roles role;
 
-    public miembros() {
+    public Miembros() {
     }
 
-    public miembros(String account, boolean isActive, roles role) {
+    public Miembros(String account, boolean isActive, Roles role) {
         this.account = account;
         this.isActive = isActive;
         this.role = role;

@@ -1,61 +1,51 @@
 package com.kerro.AvalonManagementBackend.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
-public class user {
-
-    @Id
+public class Evento {
+    
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String username;
-    private String password;
     private String nombre;
-    
-    public user() {
+    private String fecha;
+
+    public Evento() {
     }
 
-    public user(String username, String password, String nombre) {
-        this.username = username;
-        this.password = password;
+    public Evento(String nombre, String fecha) {
         this.nombre = nombre;
+        this.fecha = fecha;
     }
 
     public Long getId() {
         return id;
     }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
     public String getNombre() {
         return nombre;
     }
 
+    public String getFecha() {
+        return fecha;
+    }
+    
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 
 }

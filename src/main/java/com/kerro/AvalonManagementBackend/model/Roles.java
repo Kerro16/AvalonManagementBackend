@@ -1,6 +1,6 @@
 package com.kerro.AvalonManagementBackend.model;
 
-public enum roles {
+public enum Roles {
     COLONEL,
     VICE_COLONEL,
     MEMBER

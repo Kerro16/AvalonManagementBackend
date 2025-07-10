@@ -1,15 +1,15 @@
 package com.kerro.AvalonManagementBackend.dto;
 
-public class userDTO {
+public class UserDTO {
     private Long id;
     private String username;
     private String password;
     private String nombre;
 
-    public userDTO() {
+    public UserDTO() {
     }
 
-    public userDTO(Long id, String username, String password, String nombre) {
+    public UserDTO(Long id, String username, String password, String nombre) {
         this.id = id;
         this.username = username;
         this.password = password;

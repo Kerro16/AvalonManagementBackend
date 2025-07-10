@@ -7,24 +7,24 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class asistencia {
+public class Asistencia {
     
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
     
     @ManyToOne
-    private miembros miembro;
+    private Miembros miembro;
 
     @ManyToOne
-    private evento evento;
+    private Evento evento;
 
     private boolean asistio;
 
-    public asistencia() {
+    public Asistencia() {
     }
 
-    public asistencia(miembros miembro, evento evento, boolean asistio) {
+    public Asistencia(Miembros miembro, Evento evento, boolean asistio) {
         this.miembro = miembro;
         this.evento = evento;
         this.asistio = asistio;
@@ -33,10 +33,10 @@ public class asistencia {
     public Long getId() {
         return id;
     }
-    public miembros getMiembro() {
+    public Miembros getMiembro() {
         return miembro;
     }
-    public evento getEvento() {
+    public Evento getEvento() {
         return evento;
     }
 
@@ -47,7 +47,7 @@ public class asistencia {
     public void setId(Long id) {
         this.id = id;
     }
-    public void setMiembro(miembros miembro) {
+    public void setMiembro(Miembros miembro) {
         this.miembro = miembro;
     
     }
@@ -55,7 +55,7 @@ public class asistencia {
         this.asistio = asistio;
 
     }
-    public void setEvento(evento evento) {
+    public void setEvento(Evento evento) {
         this.evento = evento;
     }
 

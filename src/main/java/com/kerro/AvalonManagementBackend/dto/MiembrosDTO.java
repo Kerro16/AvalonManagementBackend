@@ -1,15 +1,15 @@
 package com.kerro.AvalonManagementBackend.dto;
 
-public class miembrosDTO {
+public class MiembrosDTO {
     private Long id;
     private String account;
     private boolean isActive;
     private String role;
 
-    public miembrosDTO() {
+    public MiembrosDTO() {
     }
 
-    public miembrosDTO(Long id, String account, boolean isActive, String role) {
+    public MiembrosDTO(Long id, String account, boolean isActive, String role) {
         this.id = id;
         this.account = account;
         this.isActive = isActive;
@@ -46,5 +46,15 @@ public class miembrosDTO {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "miembrosDTO{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", isActive=" + isActive +
+                ", role='" + role + '\'' +
+                '}';    
     }
 }
